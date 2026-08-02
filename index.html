@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday, My Love 💗</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="hearts"></div>
+  <canvas id="confetti"></canvas>
+
+  <button class="music-btn" id="musicBtn" aria-label="Putar musik">🎵</button>
+  <audio id="music" loop>
+    <source src="Perunggu - Ini Abadi Video Lirik.mp3" type="audio/mpeg">
+  </audio>
+
+  <main>
+    <!-- 1. OPENING -->
+    <section class="screen opening active" id="opening">
+      <div class="cloud cloud-1">☁️</div>
+      <div class="cloud cloud-2">☁️</div>
+      <div class="cute-character">🐰</div>
+      <p class="mini-text">Haloo Sayang, I made something for you</p>
+      <h1>Hey <span>My Cutie Girl, Salwa</span>! 💗</h1>
+      <p class="subtitle">Ada Hadiah Kecil Yang Aku Buat, Buat Kmu Sayangg...</p>
+      <button class="main-btn" id="openBtn">Dibuka ya Sayang  💌</button>
+    </section>
+
+    <!-- 2. BIRTHDAY REVEAL -->
+    <section class="screen birthday" id="birthday">
+      <div class="sparkle">✨</div>
+      <p class="mini-text">Hri ini hari spesial buat kmu!</p>
+      <h2>Happy Birthday</h2>
+      <h1>My Jawa Girl AWA 🎂</h1>
+      <p class="love-line">May your smile always be as beautiful as today. 💕</p>
+      <button class="main-btn next-btn" data-next="memories">Let's See Our First Meet 📸</button>
+    </section>
+    
+    <!-- 3. Memories -->
+    <section class="screen memories" id="memories">
+
+  <div class="memory-header">
+    <p class="section-tag">little pieces of us 📸</p>
+
+    <h2>Our Memories</h2>
+
+    <p class="section-desc">
+      Semoga Foto" ini tidak blur dan tidak terlupakan ya sayang wkwk. 💗
+    </p>
+  </div>
+
+  <div class="floating-gallery" id="floatingGallery">
+
+    <!-- Foto dibuat otomatis oleh JavaScript -->
+
+    <div class="memory-deco deco-heart">♡</div>
+    <div class="memory-deco deco-star">✦</div>
+    <div class="memory-deco deco-flower">🌸</div>
+
+  </div>
+
+  <!-- Tampilan ketika foto diklik -->
+  <div class="photo-viewer hidden" id="photoViewer">
+
+    <button
+      class="close-photo"
+      id="closePhoto">
+      ×
+    </button>
+
+    <div class="viewer-content">
+
+      <img
+        id="viewerImage"
+        src=""
+        alt="Our Memory">
+
+      <p id="viewerCaption">
+        One of my favorite memories with you ♡
+      </p>
+
+    </div>
+
+  </div>
+
+  <button
+    class="main-btn next-btn"
+    data-next="herStory">
+
+    Let's See My Beautiful Girl 💕
+
+  </button>
+  </section>
+  <section class="screen her-story" id="herStory">
+
+  <div class="her-story-content">
+
+    <!-- TITLE -->
+
+    <div class="her-story-title">
+
+      <p class="section-tag">
+        a little page about you 🌷
+      </p>
+
+      <h2>
+        This Is Her
+      </h2>
+
+      <p>
+        The girl who somehow made my
+        world a little brighter.
+      </p>
+
+    </div>
+
+
+    <!-- FOTO UTAMA -->
+
+    <div class="her-main-photo">
+
+      <div class="photo-tape"></div>
+
+      <img
+        src="images/image1.png"
+        alt="My favorite girl">
+
+      <span>♡</span>
+
+    </div>
+
+
+    <!-- TEXT -->
+
+    <div class="her-message">
+
+      <p>
+        Dia Cantikkkk Bangett , Tapi Gatau Kenapa 
+        Dia Sering Banget Insecureee
+      </p>
+
+      <p>
+        Senyumnya, Tawanya ,dan Kebiasaan" Kecil Dia
+        dan Hal" Random lainnya yang buat Ak jatuh cinta
+      </p>
+
+      <p>
+        Dan Ngga tau Kenapa, Semua Hal" Kecil itu 
+        Yang Menjadi Favoritku Sayang
+      </p>
+
+    </div>
+
+
+    <!-- FOTO-FOTO KECIL -->
+
+    <div
+      class="her-floating-photos"
+      id="herFloatingPhotos">
+    </div>
+
+
+    <!-- ENDING -->
+
+    <div class="her-ending">
+
+      <p class="section-tag">
+        and that's why... ❤️
+      </p>
+
+      <h2>
+        I Fell For You
+      </h2>
+
+      <p>
+        Not because you're perfect.
+        <br>
+        But because you're you.
+      </p>
+
+      <div class="big-heart">
+        ❤️
+      </div>
+
+    </div>
+
+
+    <!-- NEXT -->
+
+    <button
+      class="main-btn next-btn"
+      data-next="reasons">
+
+      A Few a thing i Love YOU 💕
+
+    </button>
+
+  </div>
+
+</section>
+
+</section>
+
+    <!-- 4. REASONS -->
+    <section class="screen reasons" id="reasons">
+      <p class="section-tag">just a few reasons... 💕</p>
+      <h2>Why You're Special</h2>
+
+      <div class="reason-grid">
+        <article class="reason-card">
+          <span>🌸</span>
+          <h3>Your Smile</h3>
+          <p>Senyum dan Tawa Kamu yang buat hari ak selalu berwarna</p>
+        </article>
+        <article class="reason-card">
+          <span>🧸</span>
+          <h3>Your Kindness</h3>
+          <p>Cara kamu memperhatikan hal-hal kecil selalu membuatku merasa beruntung.</p>
+        </article>
+        <article class="reason-card">
+          <span>✨</span>
+          <h3>Your Little Things</h3>
+          <p>Bahkan kebiasaan" kecilmu adalah hal-hal yang diam-diam paling aku suka.</p>
+        </article>
+        <article class="reason-card">
+          <span>💗</span>
+          <h3>Simply You</h3>
+          <p>Aku tidak butuh alasan yang sempurna. Aku suka kamu karena kamu adalah kamu.</p>
+        </article>
+      </div>
+
+      <button class="main-btn next-btn" data-next="letter">I Wrote Something For You 💌</button>
+    </section>
+
+    <!-- 5. LOVE LETTER -->
+    <section class="screen letter-section" id="letter">
+      <p class="section-tag">Dari lubuk hati kecilku yang paling dalam 💌</p>
+      <h2>A Little Letter</h2>
+
+      <div class="envelope-wrap" id="envelope">
+        <div class="envelope">
+          <div class="flap"></div>
+          <div class="letter-paper">
+            <p>Dear My Honey Salwa,</p>
+            <p>
+              Happy birthday, sayang. Terima kasih sudah menjadi salah satu
+              bagian paling indah dalam hidupku. Terima kasih untuk tawa,
+              cerita, perhatian, dan semua momen kecil yang kita punya.
+            </p>
+            <p>
+              Aku mungkin tidak selalu pandai mengungkapkan semuanya,
+              tapi aku ingin kamu tahu bahwa kehadiranmu sangat berarti buat ak.
+              Semoga di umur yang baru ini kamu selalu dikelilingi hal-hal
+              baik, dimudahkan dalam setiap langkah, dan tetap menjadi
+              seseorang yang luar biasa.
+            </p>
+            <p>
+              Semoga kita masih bisa membuat banyak kenangan baru bareng" ya sayangg.
+              More memories, more laughter, more us. ❤️
+            </p>
+            <p class="signature">Love,<br>Your Little Boy (YAS) 💗</p>
+          </div>
+          <div class="envelope-front">💌</div>
+        </div>
+      </div>
+
+      <p class="hint" id="letterHint">Klik amplopnya ya sayang buat bukaa 💕</p>
+      <button class="main-btn next-btn hidden" id="letterNext" data-next="cake">One More Surprise 🎂</button>
+    </section>
+
+    <!-- 6. CAKE -->
+<section class="screen cake-section" id="cake">
+
+  <p class="section-tag">
+    make a wish 🎂
+  </p>
+
+  <h2>
+    Make A Wish!
+  </h2>
+
+  <p class="section-desc">
+    Tulis satu harapan dan biarkan lilinnya yang mengirimkannya. ✨
+  </p>
+
+
+  <!-- =========================
+       CAKE
+       ========================= -->
+
+  <div class="cake" id="birthdayCake">
+
+    <div class="candle" id="candle">
+
+      <div
+        class="flame"
+        id="flame">
+        🔥
+      </div>
+
+    </div>
+
+    <div class="cake-top"></div>
+
+    <div class="cake-body">
+      <span>💗</span>
+      <span>💗</span>
+      <span>💗</span>
+    </div>
+
+    <div class="plate"></div>
+
+  </div>
+
+
+  <!-- =========================
+       WISH FORM
+       ========================= -->
+
+  <form
+    class="wish-area"
+    id="wishForm"
+    action="https://formspree.io/f/mykrrkon"
+    method="POST">
+
+    <p class="wish-label">
+      Make a wish... ✨
+    </p>
+
+    <p class="wish-hint">
+      Tutup Mata Kamu, Pikirin Apa yang kamu kepingin Banget tapi blom bisa kamu lakuin
+      tulis disini ya sayang, kepinginan kamu apapun itu 💗
+    </p>
+
+
+    <div class="wish-input-wrapper">
+
+      <textarea
+        id="wishInput"
+        name="wish"
+        class="wish-input"
+        maxlength="200"
+        placeholder="Write your wish here... 💭"
+        rows="3"
+        required></textarea>
+
+      <span
+        class="wish-counter"
+        id="wishCounter">
+        0 / 200
+      </span>
+
+    </div>
+
+
+    <input
+      type="hidden"
+      name="_subject"
+      value="💌 Birthday Wish From Your Website">
+
+
+    <input
+      type="hidden"
+      name="website"
+      value="Birthday Website">
+
+
+    <button
+      type="submit"
+      class="wish-button"
+      id="makeWishButton">
+
+      <span>
+        Make My Wish
+      </span>
+
+      <span>
+        ✨
+      </span>
+
+    </button>
+
+  </form>
+
+
+  <!-- =========================
+       EXPLOSION
+       ========================= -->
+
+  <div
+    class="wish-explosion"
+    id="wishExplosion">
+  </div>
+
+
+  <!-- =========================
+       CONFETTI
+       ========================= -->
+
+  <div
+    class="confetti-container"
+    id="confettiContainer">
+  </div>
+
+  </div>
+
+</section>
+
+
+
+    <!-- 7. GIFT -->
+    <section class="screen gift-section" id="gift">
+      <p class="section-tag">one last thing... 🎁</p>
+      <h2>I Have A Gift For You</h2>
+      <p class="section-desc">Klik kotaknya ya sayangg. Jangan takut, bukan jumpscare kok wkwk. 😆</p>
+
+      <div class="gift" id="giftBox">
+        <div class="gift-lid">🎀</div>
+        <div class="gift-box">🎁</div>
+      </div>
+
+      <div class="final-message hidden" id="finalMessage">
+        <div class="big-heart">💗</div>
+        <h1>I LOVE YOU</h1>
+        <h2>Happy Birthday, Salwa Nur Annisyah! 🎂</h2>
+        <p>
+          Terima kasih sudah menjadi bagian dari ceritaku.
+          Semoga hari ini menjadi salah satu hari yang selalu kamu ingat.
+        </p>
+        <p class="forever">More birthdays. More memories. More us. ♡</p>
+        <img class="final-photo" src="images/image.png" alt="Our photo" onerror="this.src='https://placehold.co/800x500/ffdce8/6b4b5b?text=FOTO+KALIAN'">
+        <button class="main-btn" id="replayBtn">Replay From The Beginning ↻</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
